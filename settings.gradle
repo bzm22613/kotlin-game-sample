@@ -1,0 +1,2 @@
+include 'kotlin-game-frontend'
+include 'kotlin-game-backend'

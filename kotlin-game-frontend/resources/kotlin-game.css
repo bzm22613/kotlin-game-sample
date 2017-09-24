@@ -1,0 +1,46 @@
+
+.square {
+    width: 33%;
+    float: left;
+    border: 1px solid #0088ff;
+    margin: 1px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 100px;
+}
+
+.float-div {
+    float: left;
+}
+
+.margin-left {
+    margin-left: 15px;
+}
+
+.cross {
+    margin-left: 50%;
+    margin-top: 25px;
+}
+.cross:before, .cross:after {
+    position: absolute;
+    content: ' ';
+    height: 50px;
+    width: 2px;
+    background-color: #333333;
+}
+.cross:before {
+    transform: rotate(45deg);
+}
+.cross:after {
+    transform: rotate(-45deg);
+}
+
+.circle {
+    margin-left: 50%;
+    margin-top: 25px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #333333;
+    border-radius: 50px;
+    transform: translateX(-50%);
+}
