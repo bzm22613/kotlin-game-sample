@@ -18,7 +18,7 @@ class HeaderComponent : ReactDOMComponent<HeaderComponent.Props, HeaderComponent
     override fun ReactDOMBuilder.render() {
         div {
             h1 {
-                +"○×ゲーム with (React + Spring Boot) by Kotlin"
+                +"○×ゲーム by Kotlin"
             }
         }
     }
