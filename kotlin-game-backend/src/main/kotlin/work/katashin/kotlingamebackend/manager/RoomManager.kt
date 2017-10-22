@@ -13,6 +13,21 @@ object RoomManager {
     // sessionIdとroom numberのmap
     private var sessionIdRoomIdMap = mutableMapOf<String, Int>()
 
+    /*
+     * 0 1 2
+     * 3 4 5
+     * 6 7 8
+     *
+     * -> 0, 1, 2
+     * -> 3, 4, 5,
+     * -> 6, 7, 8,
+     * -> 0, 3, 6,
+     * -> 1, 4, 7,
+     * -> 2, 5, 8,
+     * -> 0, 4, 8,
+     * -> 2, 4, 6,
+     * の８パターンの並びが存在
+     */
     private val winLineList = listOf(
         listOf(0, 1, 2),
         listOf(3, 4, 5),
@@ -125,21 +140,6 @@ object RoomManager {
                 }
             }
 
-            /*
-             * 0 1 2
-             * 3 4 5
-             * 6 7 8
-             *
-             * -> 0, 1, 2
-             * -> 3, 4, 5,
-             * -> 6, 7, 8,
-             * -> 0, 3, 6,
-             * -> 1, 4, 7,
-             * -> 2, 5, 8,
-             * -> 0, 4, 8,
-             * -> 2, 4, 6,
-             * の８パターンの並びが存在
-             */
             fun isWin(id: Int): Boolean {
                 return winLineList.any { squareList[it[0]] == id && squareList[it[1]] == id && squareList[it[2]] == id }
             }
